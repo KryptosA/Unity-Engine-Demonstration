@@ -40,7 +40,7 @@ The movement of the camera angles up and down have to be handled differently as 
 float _xRot = Input.GetAxisRaw("Mouse Y");
 Vector3 _cameraRotation = new Vector3(-_xRot, 0f, 0f) * lookSensitivity;
 ```
-### Gun
+## Gun
 The gun script functions with raycasting to shoot a particle that then collides with an object that will take damage if it has the corresponding target tag.
 ```
 RaycastHit hit;
@@ -56,14 +56,14 @@ if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit
     }
 }
 ```
-### EnemyController
+## EnemyController
 This script contains the information for the navigation mesh and pathing for the enemy artificial intelligence of the game.
 The enemy only attempts to chase the player when the player enters a specified radius outlined by a red sphere gizmo.
 ```
 Gizmos.color = Color.red;
 Gizmos.DrawWireSphere(transform.position, lookRadius);
 ```
-### DoorAnim
+## DoorAnim
 The door animations were acquired from the map pack that is featured in this demonstration. The animations are played upon entering a trigger where the door raises and closes respectively.
 The animation component is acquired from the parent door class.
 ```
@@ -79,7 +79,7 @@ void OnTriggerExit(Collider other)
     Debug.Log("false");
 }
 ```
-### CursorLock
+## CursorLock
 When playing first person shooters you often don't really think about the cursor and it's relation to a full screen game.
 The cursor needs to be locked into place and a simple script that locks the cursor in place until the escape key was pressed was implemented to prevent any accidental left clicks when playing the game and shooting.
 ```
