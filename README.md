@@ -85,3 +85,6 @@ The cursor needs to be locked into place and a simple script that locks the curs
 ```
 Cursor.lockState = CursorLockMode.Locked;
 ```
+### Acknowledgements
+The map creators and animators that I used made this demo possible.
+The many youtubers that helped me achieve this project.
